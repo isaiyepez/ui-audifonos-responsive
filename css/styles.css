@@ -1,0 +1,27 @@
+/* Custom Properties */
+
+:root {
+    --primario: #1073BA;
+    --secundario: #00DA55;
+    --gris: #3b3b3b;
+    --grisClaro: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #1f1e1e;
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --fuenteSecundaria: 'Lato', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
