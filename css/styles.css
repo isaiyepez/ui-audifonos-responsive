@@ -172,7 +172,7 @@ img {
 /** Sobre Tech PRO **/
 .sobre-tech {
     background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%),
-        url(../img/imagen-mujer.jpg);
+        url(../img/imagen-mujer.avif);
     background-position: right;
     /* Color will repeat, the image won't */
     background-repeat: repeat, no-repeat;
@@ -182,7 +182,7 @@ img {
 @media (min-width: 768px) {
     .sobre-tech {
         background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%),
-            url(../img/imagen-mujer.jpg);
+            url(../img/imagen-mujer.avif);
         /* Color will repeat, the image won't */
         background-repeat: repeat, no-repeat;
     }
@@ -274,6 +274,15 @@ img {
     background-repeat: no-repeat;
     background-position: 90% center;
     background-size: contain;
+    /* Esto afecta directamente a
+       transform */
+    transition-property: transform background-size;
+    transition-duration: 0.3s;
+}
+
+.modelo:hover {
+    transform: scale(1.1);
+    background-size: 30rem;
 }
 
 @media (min-width: 992px) {
@@ -325,4 +334,81 @@ img {
 
 .modelo-z .precio {
     font-size: 6rem;
+}
+
+/* Newsletter */
+.newsletter {
+    background-image: linear-gradient(to bottom, transparent 50%, 
+    var(--blanco) 0%), url(../img/newsletter.avif);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%, 70rem;
+}
+
+@media (min-width: 768px) {
+    .newsletter {
+        background-image: linear-gradient(to right, transparent 50%, 
+        var(--blanco) 0%), url(../img/newsletter.avif);
+        background-position: center, -21rem 0rem;
+        background-size: 100%, 100rem;
+        padding: 10rem 0;
+    }
+}
+
+@media (min-width: 2200px) {
+    .newsletter {
+        background-size: 100%, 200rem;
+        background-position: center, 0% -30rem;
+    }
+}
+
+.contenido-newsletter {
+    display: grid;
+    grid-template-rows: repeat(2, 30rem);
+    gap: var(--separacion);
+
+}
+
+@media (min-width: 768px) {
+    .contenido-newsletter {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
+.texto-newsletter {
+    grid-row: 2 / 3;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .texto-newsletter {
+        grid-row: unset;
+        grid-column: 2 / 3;
+    }
+}
+
+.formulario input[type="email"] {
+    width:100%;
+    padding: 1rem;
+}
+
+.formulario input[type="submit"] {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--primario);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 900;
+    border: none;
+}
+
+.footer p {
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2.4rem;
+    color: var(--primario);
+    padding: 3rem 0;
 }

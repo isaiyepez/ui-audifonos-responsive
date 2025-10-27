@@ -24,7 +24,7 @@
                     <source srcset="img/header.avif 1920w" sizes="100vw" type="image/avif">
                     <source srcset="img/header.webp 1920w" sizes="100vw" type="image/webp">
                     <source srcset="img/header.jpg 1920w" sizes="100vw" type="image/jpeg">
-                    <img src="img/header.jpg" alt="Header image" loading="lazy" width="1000" height="600">
+                    <img src="img/header.png" alt="Header image" loading="lazy" width="1000" height="600">
                 </picture>
 
             </div><!-- .imagen-header -->
@@ -93,6 +93,35 @@
         </div>
     </main>
 
+    <section class="newsletter">
+        <div class="contenido-newsletter contenedor">
+            <div class="texto-newsletter">
+                <h2>Recibe Actualizaciones</h2>
+                <p>Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Cupiditate unde dignissimos
+                    praesentium nobis cumque beatae.
+                    Vitae, consequuntur odio perspiciatis,
+                    recusandae exercitationem culpa neque
+                    beatae impedit, provident at commodi porro
+                    blanditiis?</p>
+                <form class="formulario" action="">
+                    <div class="input">
+                        <input type="email" placeholder="Tu Email" required>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; TechPRO Audífonos, <span id="currentDate"></span>. Todos los derechos reservados</p>
+    </footer>
+    <script>
+        const year = new Date().getFullYear();
+      document.getElementById("currentDate").textContent = year;
+    </script>
 </body>
 
 </html>
